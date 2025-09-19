@@ -1,12 +1,13 @@
 export default function Navbar() {
   return (
     <nav className="sticky top-0 bg-gray-800 shadow z-50">
-      <div className="max-w-5xl mx-auto flex justify-between items-center p-4">
-        <h1 className="text-xl font-bold text-white">Sachin Jadhav</h1>
-        <div className="space-x-6">
-          <a href="#skills" className="hover:text-teal-400 text-white">Skills</a>
-          <a href="#experience" className="hover:text-teal-400 text-white">Experience</a>
-          <a href="#hobbies" className="hover:text-teal-400 text-white">Hobbies</a>
+      <div className="max-w-5xl mx-auto flex flex-wrap justify-between items-center px-2 sm:px-4 py-2 sm:py-4 gap-y-2">
+        <h1 className="text-lg sm:text-xl font-bold text-white">Sachin Jadhav</h1>
+        <div className="flex flex-wrap gap-4 sm:gap-6 justify-center">
+          <a href="#skills" className="hover:text-teal-400 text-white text-base sm:text-lg">Skills</a>
+          <a href="#experience" className="hover:text-teal-400 text-white text-base sm:text-lg">Experience</a>
+          <a href="#education" className="hover:text-teal-400 text-white text-base sm:text-lg">Education</a>
+          <a href="#hobbies" className="hover:text-teal-400 text-white text-base sm:text-lg">Hobbies</a>
         </div>
       </div>
     </nav>

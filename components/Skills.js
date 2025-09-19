@@ -2,32 +2,44 @@ import Image from "next/image";
 
 const skills = [
   { name: "React", logo: "/logos/react.png" },
+  { name: "React Native", logo: "/logos/react.png" },
   { name: "Next.js", logo: "/logos/next.png" },
+  { name: "Gatsby", logo: "/logos/react.png" },
   { name: "C#", logo: "/logos/dotnet.png" },
   { name: "Angular", logo: "/logos/angular.png" },
   { name: "JavaScript", logo: "/logos/javascript.png" },
   { name: "TypeScript", logo: "/logos/typescript.png" },
-  { name: "SQL", logo: "/logos/sql.png" },
-  { name: "Firebase", logo: "/logos/java.png" },
+  { name: "Node.js", logo: "/logos/node.png" },
+  { name: "npm", logo: "/logos/npm.png" },
+  { name: "yarn", logo: "/logos/yarn.png" },
+  { name: "Bit.Dev", logo: "/logos/bit.png" },
+  { name: "Adobe Target", logo: "/logos/react.png" },
+  { name: "Google Analytics", logo: "/logos/react.png" },
+  { name: "MongoDB", logo: "/logos/mongo.png" },
+  { name: "Oracle", logo: "/logos/sql.png" },
+  { name: "Jira", logo: "/logos/jira.png" },
+  { name: "webpack", logo: "/logos/webpack.png" },
+  { name: "Java", logo: "/logos/java.png" },
   { name: "Git", logo: "/logos/git.png" },
-  { name: "Algolia", logo: "/logos/lamda.png" },
+  { name: "AWS Lamda", logo: "/logos/lamda.png" },
 ];
 
 export default function Skills() {
   return (
-    <section id="skills" >
-      
-<h2 className="text-4xl font-extrabold text-center mb-16">
+    <section id="skills" className="relative">
+      {/* Animated Icon Top Right */}
+
+      <h2 className="text-4xl font-extrabold text-center mb-16">
         <span className="bg-gradient-to-r from-blue-400 to-purple-400 text-transparent bg-clip-text">
           Skills
         </span>
       </h2>
 
       {/* Scrolling container */}
-      <div className="overflow-hidden relative">
-        <div className="flex space-x-16 animate-scroll">
-          {skills.concat(skills).map((skill, index) => (
-            <div key={index} className="flex-shrink-0 group">
+      <div className="overflow-x-hidden whitespace-nowrap py-4">
+        <div className="inline-flex space-x-16 animate-scroll">
+          {[...skills, ...skills].map((skill, index) => (
+            <div key={index} className="flex-shrink-0 group cursor-pointer">
               <img
                 src={skill.logo}
                 alt={skill.name}
@@ -50,7 +62,7 @@ export default function Skills() {
           }
         }
         .animate-scroll {
-          animation: scroll 25s linear infinite;
+          animation: scroll 80s linear infinite;
         }
       `}</style>
     </section>

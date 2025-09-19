@@ -11,11 +11,11 @@ const hobbies = [
 
 export default function Hobbies() {
   return (
-    <section id="hobbies" className="py-20 bg-white text-gray-900">
-     
-<h2 className="text-4xl font-extrabold text-center mb-16">
+  <section id="hobbies" className="py-10 bg-white text-gray-900">
+
+      <h2 className="text-4xl font-extrabold text-center mb-16">
         <span className="bg-gradient-to-r from-blue-400 to-purple-400 text-transparent bg-clip-text">
-               Hobbies
+          Hobbies
         </span>
       </h2>
 
