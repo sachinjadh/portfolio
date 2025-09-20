@@ -1,6 +1,39 @@
 // Q&A pairs for the chatbot
 export const qaPairs = [
   {
+    category: 'fun',
+    pairs: [
+      {
+        q: /what can you do|help|capabilities|features/i,
+        a: "I can walk you through Sachin's projects, skills, and even share a few bad jokes if you're brave enough 😅. Just ask me about his experience, projects, or say 'tell me a joke'!"
+      },
+      {
+        q: /why (should I|should we|would I|would we|to) hire sachin|why is sachin good/i,
+        a: "Because he builds scalable apps, clean APIs, and websites that don't crash when you click refresh 🔄. Plus, he's got 10 years of making complex things simple and buggy things stable. Want to hear about his specific projects?"
+      },
+      {
+        q: /who (made|created|built|developed) you|who('s| is) your (creator|developer|builder)/i,
+        a: "I was built by Sachin, a developer who loves crafting websites, mobile apps, and smart digital experiences. Basically, I'm his digital sidekick 🤖. Want to know what else he's built?"
+      },
+      {
+        q: /(are you smart|smarter than|intelligence|AI|artificial intelligence)/i,
+        a: "Not yet... but give me enough caffeine and I might catch up ☕⚡ For now, I'm just really good at telling you about Sachin's skills and experience!"
+      },
+      {
+        q: /bye|goodbye|see you|farewell|nice talking|take care/i,
+        a: "It was great chatting with you! Feel free to come back anytime to learn more about Sachin. Wishing you a wonderful day! 👋"
+      },
+      {
+        q: /thanks|thank you|awesome|great|cool|nice/i,
+        a: "You're welcome! I enjoy sharing about Sachin's skills and experiences. Don't hesitate to ask if you have more questions! 😊"
+      },
+      {
+        q: /joke|funny|make me laugh/i,
+        a: "Here's a developer joke: Why do programmers prefer dark mode? Because light attracts bugs! 😄 Speaking of bug-free code, Sachin's pretty good at that!"
+      }
+    ]
+  },
+  {
     category: 'personal',
     pairs: [
       { 
@@ -144,7 +177,7 @@ export const qaPairs = [
 ];
 
 // Fallback response when no match is found
-export const fallbackResponse = "I'm here to chat about my resume, skills, and experience! Try asking about my background, projects, or what I love to build.";
+export const fallbackResponse = "I'm here to chat about Sachin's skills and experience! Try asking about his background, projects, or technologies he loves to work with. You can also say goodbye when you're done! 👋";
 
 // Helper function to find the best matching response
 export function findAnswer(userText) {
