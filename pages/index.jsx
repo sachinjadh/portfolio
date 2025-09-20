@@ -1,14 +1,14 @@
 
+
 import Navbar from '../components/Navbar'
 import Skills from '../components/Skills'
 import Experience from '../components/Experience'
 import Hobbies from '../components/Hobbies'
 import Education from "../components/Education"
-
-
 import Projects from "../components/Projects"
 import Services from "../components/Services"
 import WorkWithMe from "../components/WorkWithMe"
+import ChatbotPopup from "../components/ChatbotPopup"
 
 
 export default function Home() {
@@ -18,10 +18,16 @@ export default function Home() {
       <main className="max-w-5xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8 py-6 space-y-10">
         <header className="relative text-center space-y-4">
           <h1 className="text-4xl font-bold"></h1>
-          <div className="mb-4">
+          <div className="flex items-center justify-center mb-4 gap-4">
             <span className="text-4xl font-extrabold bg-gradient-to-r from-blue-400 to-purple-400 text-transparent bg-clip-text">
               Web Developer / Full Stack Developer
             </span>
+            <img
+              src="/logos/profile.jpeg"
+              alt="Profile"
+              className="w-14 h-14 sm:w-20 sm:h-20 rounded-full object-cover border-4 border-white"
+              style={{ marginLeft: '8px' }}
+            />
           </div>
 
           <p className="mt-6 text-base font-semibold bg-gradient-to-r from-pink-500 via-yellow-400 to-blue-500 text-transparent bg-clip-text drop-shadow-lg flex items-center justify-center gap-1">
@@ -59,6 +65,7 @@ export default function Home() {
         <Hobbies />
         <WorkWithMe />
       </main>
+      <ChatbotPopup />
     </div>
   )
 }
