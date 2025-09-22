@@ -5,7 +5,7 @@ export const qaPairs = [
     pairs: [
       {
         q: /what can you do|help|capabilities|features/i,
-        a: "I can walk you through Sachin's projects, skills, and even share a few bad jokes if you're brave enough 😅. Just ask me about his experience, projects, or say 'tell me a joke'!"
+        a: "I can walk you through Sachin's projects, skills, and even share a few bad jokes if you're brave enough 😅. Just ask me about his experience, projects, skills, education or say 'tell me a joke'!"
       },
       {
         q: /why (should I|should we|would I|would we|to) hire sachin|why is sachin good/i,
