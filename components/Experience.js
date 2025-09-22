@@ -74,7 +74,7 @@ const experiences = [
 
 export default function Experience() {
   return (
-  <section id="experience" className="py-10 bg-white text-white">
+    <section id="experience" className="py-10 bg-white text-white">
       <h2 className="text-4xl font-extrabold text-center mb-16">
         <span className="bg-gradient-to-r from-blue-400 to-purple-400 text-transparent bg-clip-text">
           Experience
@@ -93,12 +93,12 @@ export default function Experience() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="relative w-full flex flex-col md:grid md:grid-cols-9 md:min-h-[180px]"
+              className="relative w-full md:grid md:grid-cols-9 md:min-h-[180px]"
             >
-              {/* Left side card (even index) */}
+              {/* Desktop view - even index (left side) */}
               {index % 2 === 0 ? (
                 <>
-                  <div className="w-full md:col-span-4 md:col-start-1 flex justify-end">
+                  <div className="hidden md:flex md:col-span-4 md:col-start-1 justify-end">
                     <div className="w-full md:w-[90%] bg-gray-900 border border-gray-800 p-6 rounded-xl shadow-md hover:shadow-lg transition z-10">
                       <div className="flex items-center mb-4">
                         <img
@@ -108,16 +108,13 @@ export default function Experience() {
                         />
                         <div>
                           <h3 className="text-lg font-bold">{exp.role}</h3>
-                          <p className="text-sm text-blue-400 font-semibold">
-                            {exp.company}
-                          </p>
+                          <p className="text-sm text-blue-400 font-semibold">{exp.company}</p>
                           <p className="text-xs text-gray-400">{exp.period}</p>
                         </div>
                       </div>
                       <p className="text-gray-300 text-sm whitespace-pre-line">{exp.description}</p>
                     </div>
                   </div>
-                  {/* Timeline dot */}
                   <div className="hidden md:flex md:col-span-1 md:col-start-5 items-center justify-center relative">
                     <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center shadow-md ring-4 ring-gray-950 z-20">
                       <img
@@ -127,14 +124,11 @@ export default function Experience() {
                       />
                     </div>
                   </div>
-                  {/* Empty right side */}
                   <div className="hidden md:block md:col-span-4"></div>
                 </>
               ) : (
                 <>
-                  {/* Empty left side */}
                   <div className="hidden md:block md:col-span-4"></div>
-                  {/* Timeline dot */}
                   <div className="hidden md:flex md:col-span-1 md:col-start-5 items-center justify-center relative">
                     <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center shadow-md ring-4 ring-gray-950 z-20">
                       <img
@@ -144,8 +138,7 @@ export default function Experience() {
                       />
                     </div>
                   </div>
-                  {/* Right side card (odd index) */}
-                  <div className="w-full md:col-span-4 flex justify-start">
+                  <div className="hidden md:flex md:col-span-4 justify-start">
                     <div className="w-full md:w-[90%] bg-gray-900 border border-gray-800 p-6 rounded-xl shadow-md hover:shadow-lg transition z-10">
                       <div className="flex items-center mb-4">
                         <img
@@ -155,9 +148,7 @@ export default function Experience() {
                         />
                         <div>
                           <h3 className="text-lg font-bold">{exp.role}</h3>
-                          <p className="text-sm text-blue-400 font-semibold">
-                            {exp.company}
-                          </p>
+                          <p className="text-sm text-blue-400 font-semibold">{exp.company}</p>
                           <p className="text-xs text-gray-400">{exp.period}</p>
                         </div>
                       </div>
@@ -166,9 +157,10 @@ export default function Experience() {
                   </div>
                 </>
               )}
-              {/* Mobile: single column card, timeline dot hidden */}
+              
+              {/* Mobile view */}
               <div className="md:hidden w-full">
-                <div className="w-full bg-gray-900 border border-gray-800 p-6 rounded-xl shadow-md hover:shadow-lg transition z-10 mb-4">
+                <div className="w-full bg-gray-900 border border-gray-800 p-6 rounded-xl shadow-md hover:shadow-lg transition z-10">
                   <div className="flex items-center mb-4">
                     <img
                       src={exp.logo}
@@ -177,9 +169,7 @@ export default function Experience() {
                     />
                     <div>
                       <h3 className="text-lg font-bold">{exp.role}</h3>
-                      <p className="text-sm text-blue-400 font-semibold">
-                        {exp.company}
-                      </p>
+                      <p className="text-sm text-blue-400 font-semibold">{exp.company}</p>
                       <p className="text-xs text-gray-400">{exp.period}</p>
                     </div>
                   </div>
