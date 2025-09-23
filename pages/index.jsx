@@ -1,7 +1,6 @@
 import Navbar from '../components/Navbar'
 import Skills from '../components/Skills'
 import Experience from '../components/Experience'
-import Hobbies from '../components/Hobbies'
 import Education from "../components/Education"
 import Projects from "../components/Projects"
 import Services from "../components/Services"
@@ -65,7 +64,6 @@ export default function Home() {
         <Projects />
         <DevMetrics />
         <Education />
-        <Hobbies />
         <WorkWithMe />
       </main>
       <ChatbotPopup />

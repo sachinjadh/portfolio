@@ -102,7 +102,7 @@ const DevMetrics = () => {
   }, []);
 
   return (
-    <section className="py-10 bg-white">
+    <section id="metrics" className="py-10 bg-white">
       <div className="max-w-4xl mx-auto px-4">
         <h2 className="text-3xl font-bold mb-8 text-center">
           <span className="bg-gradient-to-r from-blue-400 to-purple-400 text-transparent bg-clip-text">

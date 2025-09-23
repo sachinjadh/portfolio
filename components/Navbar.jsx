@@ -6,8 +6,8 @@ export default function Navbar() {
         <div className="flex flex-wrap gap-4 sm:gap-6 justify-center">
           <a href="#skills" className="hover:text-teal-400 text-white text-base sm:text-lg">Skills</a>
           <a href="#experience" className="hover:text-teal-400 text-white text-base sm:text-lg">Experience</a>
-          <a href="#education" className="hover:text-teal-400 text-white text-base sm:text-lg">Education</a>
-          <a href="#hobbies" className="hover:text-teal-400 text-white text-base sm:text-lg">Hobbies</a>
+          <a href="#projects" className="hover:text-teal-400 text-white text-base sm:text-lg">Projects</a>
+          <a href="#metrics" className="hover:text-teal-400 text-white text-base sm:text-lg">Metrics</a>
           <a href="#bottom" className="hover:text-teal-400 text-white text-base sm:text-lg">Contact</a>
         </div>
       </div>
