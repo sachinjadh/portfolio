@@ -22,10 +22,10 @@ export default function Services() {
           </div>
         </div>
         <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-lg shadow flex items-center">
-          <span className="text-3xl mr-4">📝</span>
+          <span className="text-3xl mr-4">🤖</span>
           <div>
-            <h3 className="text-xl font-bold mb-1">Landing Page & Blog</h3>
-            <p className="text-gray-700">SEO-optimized landing pages and blogs to boost your online presence.</p>
+            <h3 className="text-xl font-bold mb-1">AI-Powered Smart Apps</h3>
+            <p className="text-gray-700">Intelligent applications with chatbots, recommendation systems, and automated workflows.</p>
           </div>
         </div>
         <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-lg shadow flex items-center">
