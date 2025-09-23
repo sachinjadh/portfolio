@@ -21,6 +21,7 @@ export default function ChatbotPopup() {
   const [isSpeaking, setIsSpeaking] = useState(false);
   const recognitionRef = useRef(null);
   const synthRef = useRef(null);
+  const messagesContainerRef = useRef(null);
 
   // Initialize speech APIs on client side only
   useEffect(() => {
@@ -103,6 +104,17 @@ export default function ChatbotPopup() {
     );
   };
 
+  const scrollToBottom = () => {
+    if (messagesContainerRef.current) {
+      messagesContainerRef.current.scrollTop = messagesContainerRef.current.scrollHeight;
+    }
+  };
+
+  // Auto-scroll when messages update
+  useEffect(() => {
+    scrollToBottom();
+  }, [messages]);
+
   const handleMessage = (text) => {
     if (!text.trim()) return;
     const userMsg = { from: 'user', text };
@@ -153,7 +165,7 @@ export default function ChatbotPopup() {
       {open && (
         <div className="fixed bottom-24 right-6 z-50 w-80 max-w-[95vw] bg-white border border-gray-300 rounded-xl shadow-2xl flex flex-col">
           <div className="px-4 py-3 border-b font-bold bg-blue-600 text-white rounded-t-xl">AI Resume Chatbot</div>
-          <div className="flex-1 overflow-y-auto px-4 py-2 space-y-2 max-h-72">
+          <div ref={messagesContainerRef} className="flex-1 overflow-y-auto px-4 py-2 space-y-2 max-h-72">
             {messages.map((msg, i) => (
               <div key={i} className={`text-sm ${msg.from === 'bot' ? 'text-left' : 'text-right'}`}>
                 <span

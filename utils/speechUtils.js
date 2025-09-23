@@ -28,7 +28,10 @@ export function speakText(synth, text, onStart, onEnd, onError) {
   }
   
   // Strip HTML links from text
-  const plainText = text.replace(/<a[^>]*>(.*?)<\/a>/g, '$1');
+  let plainText = text.replace(/<a[^>]*>(.*?)<\/a>/g, '$1');
+  
+  // Remove emojis and special characters
+  plainText = plainText.replace(/[\u{1F300}-\u{1F9FF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}✨]/gu, '');
   
   // Cancel any ongoing speech
   synth.cancel();

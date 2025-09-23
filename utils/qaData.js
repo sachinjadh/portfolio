@@ -4,16 +4,16 @@ export const qaPairs = [
     category: 'fun',
     pairs: [
       {
-        q: /what can you do|help|capabilities|features/i,
-        a: "I can walk you through Sachin's projects, skills, and even share a few bad jokes if you're brave enough 😅. Just ask me about his experience, projects, skills, education or say 'tell me a joke'!"
+        q: /what.*(can|do) you do|how.*(can|do) you help|what.*(are|'re) your (capabilities|features)|help|capabilities|features|tell me about yourself/i,
+        a: "🤖 I'm your friendly AI portfolio guide! I can:\n\n• Share details about Sachin's skills & projects\n• Tell you about his work experience\n• Show his technical expertise\n• Share some tech jokes (if you dare!)\n\nWhat would you like to know more about?"
       },
       {
-        q: /why (should I|should we|would I|would we|to) hire sachin|why is sachin good/i,
-        a: "Because he builds scalable apps, clean APIs, and websites that don't crash when you click refresh 🔄. Plus, he's got 10 years of making complex things simple and buggy things stable. Want to hear about his specific projects?"
+        q: /why.*(hire|choose|consider|pick) sachin|what.*makes sachin (special|unique|different|stand out)|why is sachin (good|great|best)|what.*sachin('s|s) (strengths|advantages)/i,
+        a: "🌟 Here's why Sachin stands out:\n\n• Proven track record with major companies\n• Expertise in AI & modern web technologies\n• Focus on scalable, maintainable solutions\n• Strong problem-solving abilities\n\nWould you like specific examples of his work or technical expertise?"
       },
       {
-        q: /who (made|created|built|developed) you|who('s| is) your (creator|developer|builder)/i,
-        a: "I was built by Sachin, a developer who loves crafting websites, mobile apps, and smart digital experiences. Basically, I'm his digital sidekick 🤖. Want to know what else he's built?"
+        q: /(who|what).*(made|created|built|developed|designed) you|who.*('s|is|are) you|who.*('s| is) your (creator|developer|builder)|how were you (made|created|built)/i,
+        a: "I'm an AI assistant created by Sachin using Next.js and a custom Q&A system! 🤖 I'm actually one of his featured projects, showcasing his skills in:\n\n• AI implementation\n• Modern web development\n• User experience design\n\nWould you like to know more about how I was built or see his other projects?"
       },
       {
         q: /(are you smart|smarter than|intelligence|AI|artificial intelligence)/i,
@@ -38,11 +38,11 @@ export const qaPairs = [
     pairs: [
       { 
         q: /name|who are you|your name/i, 
-        a: "Hey! I'm Sachin Jadhav. I'm a full stack developer who loves building things that work and look great." 
+        a: "Hey! I'm Sachin Jadhav. I'm a Senior Full Stack Developer specializing in React, Next.js, and AI-powered applications. I love building things that work great and look even better! 🚀" 
       },
       { 
         q: /location|where.*live|based/i, 
-        a: "I'm currently living in Aurora, Illinois." 
+        a: "I'm currently based in Aurora, Illinois, but I'm open to remote opportunities and exciting projects worldwide! 🌎" 
       },
       { 
         q: /email|contact/i, 
@@ -62,12 +62,12 @@ export const qaPairs = [
     category: 'professional',
     pairs: [
       { 
-        q: /summary|about you|about background|background|profile/i, 
-        a: "I'm a passionate full stack developer with 10 years of experience. I love solving problems, building scalable apps, and making sure everything runs smoothly and securely. I enjoy working with React, Next.js, Node.js, and a bunch of other cool tech. If you want someone who cares about clean code and great user experiences, that's me!" 
+        q: /(tell me about|what('s| is)|describe) (sachin|your|the) (background|profile|summary|story)|who is sachin|about (sachin|you|background)|summary|profile/i, 
+        a: "👋 Let me tell you about Sachin!\n\n💻 Professional Overview:\n• Senior Full Stack Developer with 10+ years experience\n• Specialized in AI-powered web applications\n• Expert in React, Next.js, and cloud technologies\n\n🎯 Core Strengths:\n• High-performance application architecture\n• AI/ML integration specialist\n• Clean code advocate\n\nWant to know more about his projects or specific skills?" 
       },
       { 
-        q: /experience|years|how long/i, 
-        a: "I've been in the industry for about 10 years now. I've served several clients like Ryerson, Carmax, ATI Physical Therapy, and Allstate. Would you like to hear more about my experience with any of these companies?" 
+        q: /^experience$|(what|tell me about|describe) (your|sachin's) experience|how (long|many years)|work history|past (work|jobs|roles)|previous experience|career journey/i, 
+        a: "💼 Here's Sachin's professional journey:\n\n🏢 Recent Roles:\n• Ryerson: Led multi-brand e-commerce development\n• Carmax: Spearheaded full-stack initiatives\n• ATI Physical Therapy: Innovated healthcare solutions\n• Allstate: Revolutionized data visualization\n\n🌟 Key Achievements:\n• Reduced load times by 40%\n• Implemented AI-driven features\n• Led successful cloud migrations\n\nWould you like details about a specific role or project?" 
       },
       { 
         q: /education|degree|school|university/i, 
@@ -79,12 +79,12 @@ export const qaPairs = [
     category: 'skills',
     pairs: [
       { 
-        q: /skills|technologies|stack|technical skills/i, 
-        a: "I work with React, Next.js, Node.js, Angular, TypeScript, JavaScript, C#, .NET Core, Java, Spring Boot, and more. I also do DevOps, testing, and database work. If it's web or mobile, I've probably built it!" 
+        q: /^(skills|expertise|tech|technologies|stack)$|^specific skills$|(what|tell me about|list) (your|sachin's) (skills|technologies|tech stack|expertise)|what.*(know|work with|specialize in)|technical (skills|abilities|expertise)|what technologies/i, 
+        a: "🛠️ Sachin's Technical Arsenal:\n\n💻 Frontend Excellence:\n• React & Next.js expert\n• TypeScript advocate\n• Modern UI/UX implementation\n\n⚙️ Backend Power:\n• Node.js & Express\n• API architecture\n• Database design\n\n🤖 AI/ML Integration:\n• OpenAI implementation\n• Hugging Face Transformers\n• Custom ML solutions\n\n☁️ Cloud & DevOps:\n• AWS & Azure certified\n• CI/CD automation\n• Performance optimization\n\nWant to deep dive into any of these areas?" 
       },
       { 
-        q: /cloud|devops|azure|aws|lambda/i, 
-        a: "I'm comfortable with cloud and DevOps tools like Azure Functions, AWS Lambda, Azure DevOps, GitHub Actions, CI/CD, Dynatrace, and Docker." 
+        q: /(tell me about|what about|how about) (cloud|devops|deployment|infrastructure)|experience with (aws|azure|cloud)|cloud (expertise|experience|skills)|devops (knowledge|skills)/i, 
+        a: "☁️ Cloud & DevOps Mastery:\n\n🌐 Cloud Platforms:\n• AWS (Lambda, S3, EC2, CloudFront)\n• Azure (Functions, App Service, Cognitive Services)\n• Vercel (Edge Functions, Analytics)\n\n🔄 DevOps Practices:\n• Automated CI/CD pipelines\n• Docker containerization\n• Infrastructure as Code\n\n📊 Monitoring & Performance:\n• Real-time metrics tracking\n• Performance optimization\n• Cost optimization\n\nInterested in specific cloud solutions or DevOps practices?" 
       },
       { 
         q: /frontend|css|html|ui/i, 
@@ -141,8 +141,12 @@ export const qaPairs = [
     category: 'projects',
     pairs: [
       { 
-        q: /current projects|projects|working on|portfolio/i, 
-        a: "I'm currently working on 3 exciting projects! 🚀\n\n1) Personal AI Resume Chatbot 🤖\n2) OnceUponAI – Story Generation App 📖\n3) Sentiment Analysis App 😊/😔\n\nWould you like me to tell you more about any of these projects in detail?" 
+        q: /^(projects|portfolio|work)$|(what|tell me about|show me|describe) (your|sachin's) (projects|work|portfolio)|what.*(working on|built|developed|created)|showcase|recent projects|cool stuff/i, 
+        a: "🚀 Sachin's Featured Projects:\n\n1. 🤖 AI Resume Chatbot (That's me!)\n   • Interactive portfolio assistant\n   • Next.js & custom NLP system\n   • Real-time response generation\n\n2. 📖 OnceUponAI\n   • AI story generator for kids\n   • OpenAI GPT integration\n   • React & Node.js backend\n\n3. 🎯 Sentiment Analysis Platform\n   • Real-time emotion detection\n   • ML model implementation\n   • Multi-language support\n\nWant to explore any of these projects in detail? Or see the live demos?" 
+      },
+      {
+        q: /(how|what) did you build this|tech (stack|details)|implementation details|architecture|built with what/i,
+        a: "🛠️ Here's how I (the AI Resume Chatbot) was built:\n\n💻 Frontend:\n• Next.js for the UI\n• TailwindCSS for styling\n• Real-time chat interface\n\n🤖 AI Features:\n• Custom Q&A system\n• Regex pattern matching\n• Natural language processing\n\n☁️ Deployment:\n• Vercel edge functions\n• Automated CI/CD\n• Real-time analytics\n\nWant to see the code or learn about specific features?"
       },
       { 
         q: /^(yes|sure|yeah|ok|okay|yep|tell me more)$/i, 
